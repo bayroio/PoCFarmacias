@@ -51,7 +51,7 @@ contract PoCFarmacias {
         require(_id > 0, "Debes indicar el id único de la medicina");
         require(_existencia > 0, "Debes indicar la existencia inicial de la medicina");
 
-        medicamentos[_id-1].existencia = _existencia;
+        medicamentos[_id-1].existencia = medicamentos[_id-1].existencia + _existencia;
         
         return true;
     }
